@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            background: #1b1b32;
+            color: aliceblue;
+            height: 100vh;
+        }
+
+        .reg-form {
+            max-width: 500px;
+            min-width: 300px;
+            width: 90vw;
+            margin: 0 auto;
+        }
+        label {
+            display: block;
+            font-family: Tahoma, sans-serif;
+            font-size: 1.1rem;
+        }
+        input {
+            display: block;
+            width: 98%;
+            margin: 0.5rem 0 0 0;
+            color: aliceblue;
+            background-color: #1b1b45;
+            border: 1px solid #1b1b32;
+            height: 25px;
+        }
+        input[type='radio'] {
+            width: unset;
+            display: inline-block;
+            
+        }
+
+        fieldset {
+            border: none;
+        }
+        .name {
+            width: 47%;
+            display: inline-block;
+        }
+        .name:nth-of-type(1) {
+            margin-right: 6px;
+        } 
+        textarea {
+            display: block;
+            padding: 10px 0;
+            margin: 0.5rem 0 0.8rem 0;
+        }
+        input[type='button'] {
+            width: 40%;
+            margin: 0.5rem auto;
+            color: aliceblue;
+            background-color: #1b1b75;
+            padding: 0.5rem 0;
+            font-weight: 700;
+            border: 3px solid #1b1b45;
+            cursor: pointer;
+        }
+        h1, .first {
+            text-align: center;
+            line-height: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="form-wrapper">
+        <h1>SURVEY FORM</h1>
+        <p class="first">Please fill in the survey to the closest facts</p>
+        <form action="#" class="reg-form">
+            <fieldset class="fieldset-1">
+                <label>Full Name: <br>
+                    <span>
+                     <input type="text" class='name' name="first-name" id="first-name" required placeholder="First"><input type="text" class='name' name="last-name" id="last-name" required placeholder="Last">
+                    </span>
+                </label>
+                <label for="email">Enter an E-mail address:
+                    <input type="email" name="email" id="email" placeholder="example@example.com" required>
+                </label>
+                <label for="password">Enter password: 
+                    <input type="password" name="password" pattern="[a-z][A-Z][0-9]{8,}" id="password" placeholder="Enter a password" required>
+                </label>
+                <label for="comfirm-pw">Comfirm password:
+                    <input type="password" name="comfirm-pw" id="comfirm-pw" placeholder="Comfirm password" pattern="[a-z][A-Z][0-9]{8,}" required>
+                </label>
+            </fieldset>
+
+            <fieldset class="fieldset-2">
+                <p>What is your gender?</p>
+                <label for="male" class="radio">
+                    <input type="radio" name="gender" id="male"> Male
+                </label>
+                <label for="female" class="radio">
+                    <input type="radio" name="gender" id="female"> Female
+                </label>
+                <label for="none" class="radio">
+                    <input type="radio" name="gender" id="none"> Prefer not to say.
+                </label>
+                <p>Would you consider a career change?</p>
+                <label for="yes" class="radio">
+                    <input type="radio" name="choose" id="yes"> Yes
+                </label>
+                <label for="no" class="radio">
+                    <input type="radio" name="choose" id="no"> No
+                </label>
+                <label for="select">Which career field would you be interested in?
+                    <select name="career" id="select">
+                        <option value="">select one</option>
+                        <option value="programming">Programming</option>
+                        <option value="medicine">Medicine</option>
+                        <option value="teaching">Teaching</option>
+                        <option value="other">Other</option>
+                    </select>
+                </label>
+            </fieldset>
+            <fieldset class="fieldset-3">
+                <label for="textarea-1">What is your current career? Was it your dream career?
+                    <textarea name="textarea-1" id="textarea-1" cols="55" rows="8"></textarea>
+                </label>
+                <label for="textarea-2">What are your career goals?
+                    <textarea name="textarea-2" id="textarea-2" cols="55" rows="8"></textarea>
+                </label>
+            </fieldset>
+            <input type="button" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
